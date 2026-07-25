@@ -2,9 +2,6 @@
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
-        int i=0;
-
-sort(nums.begin(), nums.end());
       /*  int i=0,j=nums.size()-1,sum1=0,sum2=0;
         while(i<=nums.size()/2){
             sum1=sum1+nums[i];
@@ -16,10 +13,23 @@ sort(nums.begin(), nums.end());
         }
         return abs(sum1-sum2);
     }*/
-    while(i<nums.size()-1){
+ /*  
+ int i=0;
+ sort(nums.begin(), nums.end());
+     while(i<nums.size()-1){
         if(nums[i]==nums[i+1])i=i+2;
         else return nums[i];
     }
     return nums[i];
+    //this aproach is better tC:O(nlog(n)(for sorting)+O(n))~O(n)
     }
+    */
+    int xOr=0;
+    for(int i=0;i<nums.size();i++){
+        xOr=xOr^nums[i];
+    }
+    return xOr;
+    }
+    //best solution is using xor property 
+
 };
