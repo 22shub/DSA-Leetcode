@@ -15,3 +15,4 @@ public:
         return candidate;
     }
 };
+//majority vote algorithm
