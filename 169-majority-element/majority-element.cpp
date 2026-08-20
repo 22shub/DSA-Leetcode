@@ -17,5 +17,6 @@ public:
 };
 // optimal->majority vote algorithm
 //tc:O(n),SC:O(1)
-//brute->sort
+//intute also->sort and middle element will be the answer since candidate elemet is present more than n/2 times
+//brute->pick one find others increase count O(n^2)
 //better->hashmap
