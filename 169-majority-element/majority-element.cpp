@@ -15,4 +15,7 @@ public:
         return candidate;
     }
 };
-//majority vote algorithm
+// optimal->majority vote algorithm
+//tc:O(n),SC:O(1)
+//brute->sort
+//better->hashmap
