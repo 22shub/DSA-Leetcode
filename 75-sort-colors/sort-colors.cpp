@@ -3,23 +3,19 @@ public:
     void sortColors(vector<int>& nums) {
         int i=0,j=0,k=nums.size()-1;
         while(j<=k){
-            if(nums[j]==0 && nums[i]!=0){
-                swap(nums[i],nums[j]);
+            if(nums[j]==0){
+                swap(nums[j],nums[i]);
                 i++;
+                j++;
             }
-            if(nums[j]==2 && nums[k]!=2){
-                swap(nums[k],nums[j]);
+           else if(nums[j]==1){
+                j++;
+            }
+            else if(nums[j]==2){
+                swap(nums[j],nums[k]);
                 k--;
             }
-            if(nums[j]==0 && nums[i]!=0){
-                swap(nums[i],nums[j]);
-                i++;
-            }
-           // if(nums[j]==1 || j<i)j++;
-            if(nums[i]==0)i++;
-            if(nums[k]==2)k--;  
-            if(nums[j]!=2)j++;  
-            }
         }
-    
+    }
 };
+//use of dutch fag algo. 3 pointer
