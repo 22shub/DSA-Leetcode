@@ -30,6 +30,7 @@ LC 128 - Longest Consecutive Sequence
 Idea:
 - Put all elements in unordered_set for O(1) average lookup.
 - A number x is a sequence start only if x-1 doesn't exist.
+- we will not directly start checking x+1,x+2.. for every value ,it will only inc. complixity first find if x1 doesnt exist it will be starting point fo new sequence
 - From each start, keep checking x+1, x+2... and track maximum length.
 - Iterate over the set, not nums, to avoid duplicate sequence scans.
 
